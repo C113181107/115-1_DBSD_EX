@@ -1,3 +1,8 @@
+# Name: 顏于萱<BR>
+# SID: C113181107 <BR>
+# EX03
+<HR> 
+
 <?php
 $result = 0;
 $n = 0;
