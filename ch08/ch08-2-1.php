@@ -5,5 +5,5 @@ echo "SID: C113181107<br/>";
 echo "<HR>";
 echo "W08-EX02" . "<br/>";
 
-header("Location: ch8-1-2.php");
+header("Location: ch08-1-2.php");
 exit();
