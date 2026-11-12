@@ -28,10 +28,10 @@ function each(&$array)
         if (isset($_COOKIE[$arr]) && is_array($_COOKIE[$arr])) {
             if ($flag) {
                 $flag = false;
-                $color = '#FF99CC';
+                $color = "#FF99CC";
             } else {
                 $flag = true;
-                $color = '#99FFCC';
+                $color = "#99FFCC";
             }
             echo "<tr bgcolor='" . $color . "'><td>";
             echo "<a href='delete.php?Id=" . $arr . "'>";
@@ -46,7 +46,6 @@ function each(&$array)
             }
             $total += $price * $quantity;  // 計算總金額
             echo "</tr>";
-
         }
 
     }
