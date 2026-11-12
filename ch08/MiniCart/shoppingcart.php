@@ -31,15 +31,24 @@ function each(&$array)
                 $color = '#FF99CC';
             } else {
                 $flag = true;
-                $color = '#99FFC';
+                $color = '#99FFCC';
             }
             echo "<tr bgcolor='" . $color . "'><td>";
             echo "<a href='delete.php?Id=" . $arr . "'>";
             echo "刪除</a></td>";
 
             while (list($name, $value) = each($_COOKIE[$arr])) {
+                echo "<td>" . $value . "</td>";
+                if ($name == "Price")
+                    $price = $value;
+                if ($name == "Quantity")
+                    $quantity = $value;
             }
+            $total += $price * $quantity;  // 計算總金額
+            echo "</tr>";
+
         }
+
     }
     if ($total != 0) {  // 顯示總金額
         echo "<tr bgcolor=yellow><td colspan=5 align=right>";
