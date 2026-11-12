@@ -12,6 +12,8 @@ function each(&$array)
     }
     return $res;
 }
+require("about_me.php");
+echo "W10-EX02" . "<Hr/>";
 ?>
 <table border="0">
     <tr bgcolor="#CC99FF">
@@ -36,6 +38,7 @@ function each(&$array)
             echo "<tr bgcolor='" . $color . "'><td>";
             echo "<a href='delete.php?Id=" . $arr . "'>";
             echo "刪除</a></td>";
+            
 
             while (list($name, $value) = each($_COOKIE[$arr])) {
                 echo "<td>" . $value . "</td>";
