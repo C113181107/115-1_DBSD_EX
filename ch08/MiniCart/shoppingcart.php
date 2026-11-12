@@ -25,7 +25,25 @@ function each(&$array)
     $flag = false;
     $total = 0;
     while (list($arr, $value) = each($_COOKIE)) {
+        if (isset($_COOKIE[$arr]) && is_array($_COOKIE[$arr])) {
+            if ($flag) {
+                $flag = false;
+                $color = '#FF99CC';
+            } else {
+                $flag = true;
+                $color = '#99FFC';
+            }
+            echo "<tr bgcolor='" . $color . "'><td>";
+            echo "<a href='delete.php?Id=" . $arr . "'>";
+            echo "刪除</a></td>";
 
+            while (list($name, $value) = each($_COOKIE[$arr])) {
+            }
+        }
+    }
+    if ($total != 0) {  // 顯示總金額
+        echo "<tr bgcolor=yellow><td colspan=5 align=right>";
+        echo "總金額 = NT$" . $total . "元</td></tr>";
     }
     ?>
 </table>
