@@ -32,4 +32,4 @@ rename($file . ".bak", "text.txt");
 $file = "text.txt";
 
 unlink($file);   //刪除檔案
-echo "file: $file deleted <br/>";
+echo "file: $file has been deleted <br/>";
